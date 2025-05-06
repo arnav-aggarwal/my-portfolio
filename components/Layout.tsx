@@ -7,10 +7,12 @@ type LayoutProps = {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="min-h-screen px-4 md:px-12 py-8">{children}</main>
+      <main className="flex-grow flex items-center justify-center px-4 md:px-12 py-4">
+        {children}
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }
